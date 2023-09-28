@@ -1,4 +1,5 @@
 sudo: required
+
 services:
   - docker
 
@@ -15,8 +16,8 @@ deploy:
   env: "docker-env"
   bucket_name: "elasticbeanstalk-us-east-1-023707775197"
   bucket_path: "docker"
-  skip_cleanup: true
   on:
     branch: main
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
+  skip_cleanup: true
